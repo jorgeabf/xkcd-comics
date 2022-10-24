@@ -9,6 +9,7 @@ export function Header() {
             alignItems: "center",
             justifyContent: "space-between",
             gap: "1em",
+            backgroundColor: "hsl(0,0%,95%)",
          }}>
          <Text
             h1
@@ -16,13 +17,18 @@ export function Header() {
             weight="bold"
             css={{
                textGradient:
-                  "45deg, $blue700 0%, $red700 50%",
+                  "45deg, $gray700 0%, $gray900 70%",
             }}>
-            Comics App
+            Comics xkcd
          </Text>
          <nav>
             <Container
-               css={{ display: "flex", gap: "1em" }}>
+               fluid
+               css={{
+                  display: "flex",
+                  gap: "1em",
+                  padding: "0",
+               }}>
                <Link href="/">
                   <a>Home</a>
                </Link>
