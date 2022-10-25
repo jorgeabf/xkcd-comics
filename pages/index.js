@@ -1,28 +1,35 @@
 import TheLayout from "../layouts/TheLayout.jsx";
 import fs from "fs/promises";
 import Link from "next/link";
-import { Card } from "@nextui-org/react";
 
 export default function Home({ latestComics }) {
    return (
       <TheLayout>
          <h2>Latest Comics</h2>
-         {latestComics.map((comic) => {
-            return (
-               <Link
-                  href={`/comic/${comic.id}`}
-                  key={comic.id}>
-                  <a>
-                     <h3>{comic.title}</h3>
-                     <img
-                        height="200"
-                        src={comic.img}
-                        alt={comic.alt}
-                     />
-                  </a>
-               </Link>
-            );
-         })}
+         <div
+            style={{
+               display: "flex",
+               flexWrap: "wrap",
+               gap: "3rem",
+               justifyContent: "space-between",
+            }}>
+            {latestComics.map((comic) => {
+               return (
+                  <Link
+                     href={`/comic/${comic.id}`}
+                     key={comic.id}>
+                     <a>
+                        <h3>{comic.title}</h3>
+                        <img
+                           height="300"
+                           src={comic.img}
+                           alt={comic.alt}
+                        />
+                     </a>
+                  </Link>
+               );
+            })}
+         </div>
       </TheLayout>
    );
 }
