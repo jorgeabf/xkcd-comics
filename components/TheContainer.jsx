@@ -5,7 +5,7 @@ function TheContainer({ children }) {
          <style jsx>{`
             .the-container {
                width: 90%;
-               max-width: 1300px;
+               max-width: 1400px;
                margin-inline: auto;
             }
          `}</style>

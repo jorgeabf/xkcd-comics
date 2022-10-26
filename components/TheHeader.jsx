@@ -28,9 +28,6 @@ export default function TheHeader() {
                      <Link href="/">
                         <a className="nav-link">Home</a>
                      </Link>
-                     <Link href="/about">
-                        <a className="nav-link">About</a>
-                     </Link>
                      <Link href="/search">
                         <a className="nav-link">Search</a>
                      </Link>
@@ -56,6 +53,7 @@ export default function TheHeader() {
                .nav-link {
                   text-transform: uppercase;
                   font-weight: bold;
+                  color: hsl(0, 0%, 30%);
                }
             `}
          </style>
